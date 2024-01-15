@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title> Users</title>
+    </head>
+    <body>
+        <h1> Here are your users fot Django_app</h1>
+        {%if users %}
+        <ol>
+            {%for persons in users %}
+            <li> User Info </li>
+            <ul>
+                <li> First Name: {{persons.first_name}} </li>
+                <li> Last Name: {{persons.last_name}} </li>
+                <li> Email: {{persons.email}} </li>
+            </ul>
+            {% endfor %}
+        <ol>
+        {% endif %}
+    </body>
+</html>
